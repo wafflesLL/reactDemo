@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: ["class"],
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -13,23 +14,23 @@ module.exports = {
       },
       colors: {
         primary: {
-          100: "#FFE8F0",
+          "100": "#FFE8F0",
           DEFAULT: "#EE2B69",
         },
         secondary: "#FBE843",
         black: {
-          100: "#333333",
-          200: "#141413",
-          300: "#7D8087",
+          "100": "#333333",
+          "200": "#141413",
+          "300": "#7D8087",
           DEFAULT: "#000000",
         },
         white: {
-          100: "#F7F7F7",
+          "100": "#F7F7F7",
           DEFAULT: "#FFFFFF",
         },
       },
       fontFamily: {
-        "work-sans": ['"Work Sans"', "sans-serif"],
+        "work-sans": ["var(--font-work-sans)"],
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -43,8 +44,5 @@ module.exports = {
       },
     },
   },
-  plugins: [
-    require("tailwindcss-animate"),
-    require("@tailwindcss/typography"),
-  ],
+  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
 };
